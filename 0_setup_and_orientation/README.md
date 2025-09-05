@@ -19,6 +19,8 @@ Material Design is desin system developed by Google that provides guidelines for
 
 Key properties of the Material App include home (default route of the app - usually a scaffold), routes a map of routes for navigation, theme of data for the app etc.
 
+You can read more about Material Design [here](https://m2.material.io/design/introduction)
+
 
 ## Scaffold 
 
@@ -56,3 +58,27 @@ The build() method is responsible for describing the widget tree based on the cu
 
  
 
+Here is an example of a widget tree. 
+
+```plaintext
+MaterialApp
+└── home: Scaffold
+    ├── appBar: AppBar
+    │   └── title: Text('Dashboard')
+    ├── drawer: Drawer
+    │   └── child: ListView
+    │       ├── DrawerHeader
+    │       └── ListTile (e.g. Profile)
+    ├── body: Column
+    │   ├── Padding
+    │   │   └── Text('Welcome, Jack!')
+    │   ├── Expanded
+    │   │   └── ListView
+    │   │       ├── Card
+    │   │       │   └── ListTile (e.g. Task 1)
+    │   │       └── Card
+    │   │           └── ListTile (e.g. Task 2)
+    └── bottomNavigationBar: BottomNavigationBar
+        ├── BottomNavigationBarItem (Home)
+        └── BottomNavigationBarItem (Settings)
+```
